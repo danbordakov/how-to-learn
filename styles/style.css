@@ -9,10 +9,16 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
+.brt {
+  border: 1px solid red;
+}
+
 .header {
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
+  display: flex;
+  position: relative;
   /* выше установили ограничения для секции */
 }
 
@@ -28,4 +34,124 @@
   color: white;
   margin-right: 0;
   margin-top: 80px;
+}
+
+.background-color_gray{
+  background-color: #f2f2f2;
+}
+
+.logo {
+  position: absolute;
+  width: 228px;
+  height: 32px;
+  top: 30px;
+  left: 64px;
+  background-image: url("../images/logo_place_header.svg");
+  z-index: 2;
+}
+
+.title {
+  width: 730px;
+  margin: auto auto auto 64px;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.title_text {
+  font-size: 102px;
+  line-height: 96px;
+  margin: 0;
+}
+
+.subtitle {
+  width: 388px;
+  position: absolute;
+  bottom: 30px;
+  left: 64px;
+  z-index: 2;
+}
+
+.subtitle_text {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: #2f80ed;
+}
+
+.main-illustration {
+  position: absolute;
+  width: 765px;
+  height: 608px;
+  bottom: 0;
+  right: 0;
+  background-image: url("../images/header-image.png");
+  background-size: cover;
+  z-index: 1;
+}
+
+.square-pic {
+  position: absolute;
+  width: 568px;
+  height: 568px;
+  top: 64px;
+  right: 0;
+  background-color: #2f80ed;
+}
+
+.description {
+  margin-top: 100px;
+}
+
+.two-columns {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.two-columns__brief {
+  width: 175px;
+
+}
+
+.two-columns__brief_text {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: normal;
+  margin: 0;
+  color:#2f80ed;
+}
+
+.two-columns__main-text {
+  width: 80%;
+  min-width: 784px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+}
+
+.two-columns__paragraph {
+
+}
+
+
+.two-columns__span-accent {
+  margin: 30px 0;
+}
+
+.two-columns__span-text_bold {
+  font-weight: bold;
+}
+
+.two-columns__paragraph-text {
+  margin: 0;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: normal;
 }
