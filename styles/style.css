@@ -6,62 +6,36 @@
   /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
-.brt {
-  border: 1px solid red;
-}
-
+/* ШАПКА */
 .header {
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
   display: flex;
+  flex-direction: column;
   position: relative;
-  /* выше установили ограничения для секции */
+  justify-content: center;
 }
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
-.header__square-pic {
-  height: 568px;
-  width: 568px;
-}
-
-/* и элемента с модификатором вида ключ-значение */
-.table__cell_theme_dark {
-  width: 200px;
-  color: white;
-  margin-right: 0;
-  margin-top: 80px;
-}
-
-.background-color_gray{
-  background-color: #f2f2f2;
-}
-
-.logo {
+.logo_place_header {
   position: absolute;
   width: 228px;
   height: 32px;
   top: 30px;
   left: 64px;
-  background-image: url("../images/logo_place_header.svg");
   z-index: 2;
 }
 
 .title {
   width: 730px;
-  margin: auto auto auto 64px;
-  justify-content: center;
-  align-items: center;
+  height: fit-content;
+  margin: 0 0 0 64px;
   z-index: 2;
-}
-
-.title_text {
   font-size: 102px;
   line-height: 96px;
-  margin: 0;
 }
 
 .subtitle {
@@ -79,23 +53,21 @@
   margin: 0;
 }
 
-.link {
+.header__link {
   text-decoration: none;
   color: #2f80ed;
 }
 
-.main-illustration {
+.header__main-illustration {
   position: absolute;
   width: 765px;
   height: 608px;
   bottom: 0;
   right: 0;
-  background-image: url("../images/header-image.png");
-  background-size: cover;
   z-index: 1;
 }
 
-.square-pic {
+.header__square-pic {
   position: absolute;
   width: 568px;
   height: 568px;
@@ -104,6 +76,7 @@
   background-color: #2f80ed;
 }
 
+/* БЛОК ОПИСАНИЯ */
 .description {
   margin-top: 100px;
 }
@@ -117,7 +90,6 @@
 
 .two-columns__brief {
   width: 175px;
-
 }
 
 .two-columns__brief_text {
@@ -125,33 +97,250 @@
   line-height: 1.2;
   font-weight: normal;
   margin: 0;
-  color:#2f80ed;
+  color: #2f80ed;
 }
 
 .two-columns__main-text {
   width: 80%;
   min-width: 784px;
-  /* display: flex;
+  display: flex;
   flex-direction: column;
-  justify-content: space-between; */
+  justify-content: space-between;
 }
 
 .two-columns__paragraph {
-
-}
-
-
-.two-columns__span-accent {
-  margin: 30px 0;
-}
-
-.two-columns__span-text_bold {
-  font-weight: bold;
-}
-
-.two-columns__paragraph-text {
   margin: 0;
   font-size: 24px;
   line-height: 34px;
   font-weight: normal;
+}
+
+.two-columns__span-accent {
+  font-weight: bold;
+}
+
+.two-columns__paragraph_margin {
+  margin: 30px 0;
+}
+
+/* БЛОК ЦИФРЫ И ФАКТЫ */
+.digits {
+  margin: 100px auto;
+}
+
+.section-title {
+  width: 60%;
+  margin: 0 auto 20px auto;
+  text-align: center;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.section-subtitle {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.table {
+  width: 1100px;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.table__cell {
+  width: 250px;
+  margin: 60px 0 0 0;
+}
+
+.table__heading {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.table__text {
+  margin: 20px 0 0 0;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/* БЛОК ФЕЙНМАН */
+.feynman {
+  padding-top: 100px;
+  position: relative;
+  height: 790px;
+  background-image: url("../images/feynman.png");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 867px;
+}
+
+.feynman__title {
+  width: 648px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: 600;
+}
+
+.feynman__subtitle {
+  margin: 70px auto 0 auto;
+  width: 648px;
+  text-align: center;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+}
+
+.feynman__link {
+  position: absolute;
+  right: 48px;
+  top: 445px;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  text-decoration: none;
+  color: #2f80ed;
+}
+
+/* БЛОК КАУФМАН */
+.kaufman {
+  padding: 90px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-title_theme_dark {
+  position: relative;
+  color: white;
+  width: 60%;
+  margin: 0 auto 20px auto;
+  text-align: center;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.section-subtitle_theme_dark {
+  position: relative;
+  color: white;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  z-index: 1;
+}
+
+.table__cell_theme_dark {
+  width: 200px;
+  margin: 80px 0 0 0;
+  z-index: 1;
+}
+
+.table__heading_theme_dark {
+  color: white;
+  margin: 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.table__text_theme_dark {
+  color: white;
+  margin: 20px 0 0 0;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.kaufman__image {
+  position: absolute;
+  right: -210px;
+  top: 0;
+  width: 877px;
+}
+
+/* ПОДВАЛ */
+.footer {
+  min-height: 350px;
+  display: flex;
+}
+
+.footer__columns {
+  width: 90%;
+  margin: 60px auto 40px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer__column_content_copyright {
+  flex-basis: 711px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer__author {
+  color: white;
+  justify-self: end;
+  margin: 18px 0;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+  width: fit-content;
+}
+
+.footer__column-heading {
+  color: white;
+  margin: 0;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.footer__column-links {
+  padding: 0;
+  margin: 20px 0 16px 0;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+  list-style-type: none;
+}
+
+.footer__column-link {
+  color: white;
+  text-decoration: none;
+}
+
+.logo_place_footer {
+  width: 228px;
+}
+
+.footer__column-link_icon {
+  width: 16px;
+  margin: 0 10px 0 0;
+}
+
+/* ЦВЕТА ФОНОВ */
+.background-color_gray {
+  background-color: #f2f2f2;
+}
+
+.background-color_dark-gray {
+  background-color: #1f1f1f;
 }
