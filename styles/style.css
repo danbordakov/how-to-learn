@@ -18,18 +18,23 @@
   flex-direction: column;
   position: relative;
   justify-content: center;
+  background-color: #f2f2f2;
+}
+
+.logo {
+  width: 228px;
+  height: 32px;
 }
 
 .logo_place_header {
+  background-image: url("../images/logo_place_header.svg");
   position: absolute;
-  width: 228px;
-  height: 32px;
   top: 30px;
   left: 64px;
   z-index: 2;
 }
 
-.title {
+.header__title {
   width: 730px;
   height: fit-content;
   margin: 0 0 0 64px;
@@ -38,15 +43,12 @@
   line-height: 96px;
 }
 
-.subtitle {
+.header__subtitle {
   width: 388px;
   position: absolute;
   bottom: 30px;
   left: 64px;
   z-index: 2;
-}
-
-.subtitle_text {
   font-size: 18px;
   line-height: 25px;
   font-weight: normal;
@@ -90,9 +92,6 @@
 
 .two-columns__brief {
   width: 175px;
-}
-
-.two-columns__brief_text {
   font-size: 18px;
   line-height: 1.2;
   font-weight: normal;
@@ -113,14 +112,15 @@
   font-size: 24px;
   line-height: 34px;
   font-weight: normal;
+  margin: 0 0 30px 0;
+}
+
+.two-columns__paragraph:last-of-type {
+  margin: 0;
 }
 
 .two-columns__span-accent {
   font-weight: bold;
-}
-
-.two-columns__paragraph_margin {
-  margin: 30px 0;
 }
 
 /* БЛОК ЦИФРЫ И ФАКТЫ */
@@ -135,6 +135,8 @@
   line-height: 1.15;
   font-size: 60px;
   font-weight: 600;
+  z-index: 2;
+  position: relative;
 }
 
 .section-subtitle {
@@ -144,10 +146,13 @@
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
+  z-index: 2;
 }
 
 .table {
   width: 1100px;
+  padding: 0;
+  list-style-type: none;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
@@ -158,6 +163,7 @@
 .table__cell {
   width: 250px;
   margin: 60px 0 0 0;
+  z-index: 1;
 }
 
 .table__heading {
@@ -178,11 +184,12 @@
 .feynman {
   padding-top: 100px;
   position: relative;
-  height: 790px;
+  min-height: 790px;
   background-image: url("../images/feynman.png");
   background-position: left bottom;
   background-repeat: no-repeat;
-  background-size: 867px;
+  background-size: 867px 637px;
+  background-color: #f2f2f2;
 }
 
 .feynman__title {
@@ -219,65 +226,53 @@
   padding: 90px 0;
   position: relative;
   overflow: hidden;
+  background-color: #1f1f1f;
 }
 
 .section-title_theme_dark {
-  position: relative;
   color: white;
-  width: 60%;
-  margin: 0 auto 20px auto;
-  text-align: center;
-  line-height: 1.15;
-  font-size: 60px;
-  font-weight: 600;
   z-index: 1;
 }
 
 .section-subtitle_theme_dark {
-  position: relative;
   color: white;
-  width: 60%;
-  margin: 0 auto;
-  text-align: center;
-  line-height: 34px;
-  font-size: 24px;
-  font-weight: normal;
-  z-index: 1;
 }
 
 .table__cell_theme_dark {
   width: 200px;
   margin: 80px 0 0 0;
-  z-index: 1;
 }
 
 .table__heading_theme_dark {
   color: white;
-  margin: 0;
-  line-height: 1.15;
-  font-size: 24px;
-  font-weight: 600;
 }
 
 .table__text_theme_dark {
   color: white;
-  margin: 20px 0 0 0;
-  line-height: 1.2;
-  font-size: 18px;
-  font-weight: normal;
 }
 
-.kaufman__image {
+.kaufman__triangle {
+  background-image: url("../images/kaufman-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 877px;
   position: absolute;
   right: -210px;
   top: 0;
   width: 877px;
+  height: 877px;
+  z-index: 0;
 }
 
 /* ПОДВАЛ */
 .footer {
   min-height: 350px;
   display: flex;
+  background-color: #1f1f1f;
+}
+
+.logo_place_footer {
+  background-image: url("../images/logo_place_footer.svg");
 }
 
 .footer__columns {
@@ -288,10 +283,14 @@
   justify-content: space-between;
 }
 
-.footer__column_content_copyright {
-  flex-basis: 711px;
+.footer__column {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+}
+
+.footer__column_content_copyright {
+  flex-basis: 711px;
   justify-content: space-between;
 }
 
@@ -327,20 +326,6 @@
   text-decoration: none;
 }
 
-.logo_place_footer {
-  width: 228px;
-}
-
-.footer__column-link_icon {
-  width: 16px;
+.footer__social-icon {
   margin: 0 10px 0 0;
-}
-
-/* ЦВЕТА ФОНОВ */
-.background-color_gray {
-  background-color: #f2f2f2;
-}
-
-.background-color_dark-gray {
-  background-color: #1f1f1f;
 }
